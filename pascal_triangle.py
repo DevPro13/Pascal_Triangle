@@ -1,11 +1,14 @@
-from __future__ import print_function
+"""****************************PASCAL_TRIANGLE V1.0**************************************************"""
+from __future__ import print_function # for python version below 3.0, this import is necessary to use that end='' in print function.
 def sol(degree):
+	'''This function will add list of each element into a single list.'''
 	globals()['deg_order']=degree
 	globals()['list_ele']=[]
 	for i in range(deg_order+1):
 		list_ele.append(calc(i))
 	display()
 def calc(num):
+	'''this function will generate list of element in each degree and send them to sol()'''
 	ele=[]
 	if num==0:
 		return [1]
@@ -18,6 +21,7 @@ def calc(num):
 			ele.insert(m,(list_ele[num-1][m-1]+list_ele[num-1][m]))
 		return ele
 def display():
+	'''this will display the triangle as formatted output of triangle'''
 	for i in range(deg_order+1):
 		for j in range(i,(deg_order)):
 			print(end=' ')
@@ -26,8 +30,8 @@ def display():
 			if (k+1)%2==0:
 				print(end=' ')
 		print("\n",end='')
+if __name__=='__main__':
+	degree=int(input("Enter the order of Pascal_tri: "))
+	sol(degree)
 
-
-degree=int(input("Enter the degree of row of Pascal_tri: "))
-sol(degree)
-
+'''Output doesnot satisfyied me... I will improve them in future versions'''
