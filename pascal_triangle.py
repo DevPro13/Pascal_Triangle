@@ -5,8 +5,8 @@ def sol(degree):
 	globals()['deg_order']=degree
 	globals()['list_ele']=[]
 	for i in range(deg_order+1):
-		list_ele.append(calc(i))
-	display()
+		list_ele.append(calc(i)) #append list items in a list
+	display() #i called it here so that i dont have call it in main
 def calc(num):
 	'''this function will generate list of element in each degree and send them to sol()'''
 	ele=[]
@@ -18,7 +18,7 @@ def calc(num):
 		ele.insert(0,1)
 		ele.insert(num,1)
 		for m in range(1,num):
-			ele.insert(m,(list_ele[num-1][m-1]+list_ele[num-1][m]))
+			ele.insert(m,(list_ele[num-1][m-1]+list_ele[num-1][m]))#inserts element in respective index of list item
 		return ele
 def display():
 	'''this will display the triangle as formatted output of triangle'''
