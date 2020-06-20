@@ -34,5 +34,5 @@ if __name__=='__main__':
 	degree=int(input("Enter the order of Pascal_tri: "))
 	sol(degree)
 
-'''Output didn't satisfied me... I will improve them in future versions'''
+'''Output format didn't satisfied me... I will improve them in future versions'''
 #author-Dev Parajuli... follow me in instagram- @dev18official
