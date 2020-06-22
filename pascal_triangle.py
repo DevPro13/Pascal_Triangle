@@ -1,4 +1,4 @@
-"""****************************PASCAL_TRIANGLE V1.0**************************************************"""
+"""****************************PASCAL_TRIANGLE V1.1**************************************************"""
 from __future__ import print_function # for python version below 3.0, this import is necessary to use that end='' in print function.
 def sol(degree):
 	'''This function will add list of each element into a single list.'''
@@ -32,5 +32,6 @@ if __name__=='__main__':
 	degree=int(input("Enter the order of Pascal_tri: "))
 	sol(degree)
 
-'''Output format didn't satisfied me... I will improve them in future versions'''
+
+#updated_version_1.1
 #author-Dev Parajuli... follow me in instagram- @dev18official
