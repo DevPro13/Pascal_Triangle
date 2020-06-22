@@ -26,7 +26,7 @@ def display():
 	for i in list_ele:
 		row=' '.join(map(str,i))
 		while len(row)<length_of_last_list:
-			row='_'+row+'_'
+			row=' '+row+' '
 		print(row)
 if __name__=='__main__':
 	degree=int(input("Enter the order of Pascal_tri: "))
