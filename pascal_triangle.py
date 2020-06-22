@@ -6,7 +6,7 @@ def sol(degree):
 	globals()['list_ele']=[]
 	for i in range(deg_order+1):
 		list_ele.append(calc(i)) #append list items in a list
-	display() #i called it here so that i dont have call it in main
+	display() #i called it here so that i dont have to call it in main
 def calc(num):
 	'''this function will generate list of element in each degree and send them to sol()'''
 	ele=[]
@@ -22,14 +22,12 @@ def calc(num):
 		return ele
 def display():
 	'''this will display the triangle as formatted output of triangle'''
-	for i in range(deg_order+1):
-		for j in range(i,(deg_order)):
-			print(end=' ')
-		for k in range(i+1):
-			print(list_ele[i][k],end=' ')
-			if (k+1)%2==0:
-				print(end=' ')
-		print("\n",end='')
+	length_of_last_list=len(' '.join(map(str,list_ele[-1])))
+	for i in list_ele:
+		row=' '.join(map(str,i))
+		while len(row)<length_of_last_list:
+			row='_'+row+'_'
+		print(row)
 if __name__=='__main__':
 	degree=int(input("Enter the order of Pascal_tri: "))
 	sol(degree)
